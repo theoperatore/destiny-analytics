@@ -385,7 +385,7 @@ delegates@^1.0.0:
     firebase "^3.5.0"
 
 "destiny-analytics-poller@file:../destiny-analytics-poller":
-  version "1.0.2"
+  version "1.0.3"
   dependencies:
     debug "^2.2.0"
     level "^1.5.0"
@@ -522,6 +522,16 @@ faye-websocket@0.9.3:
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.9.3.tgz#482a505b0df0ae626b969866d3bd740cdb962e83"
   dependencies:
     websocket-driver ">=0.5.1"
+
+"file:../destiny-analytics-poller":
+  name destiny-analytics-poller
+  version "1.0.3"
+  dependencies:
+    debug "^2.2.0"
+    level "^1.5.0"
+    node-cron "^1.1.2"
+    node-fetch "^1.6.3"
+    node-uuid "^1.4.7"
 
 filename-regex@^2.0.0:
   version "2.0.0"

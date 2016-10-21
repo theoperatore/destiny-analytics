@@ -5,6 +5,7 @@
   "main": "injest.js",
   "scripts": {
     "old-deploy": "scp -r lib/* root@104.131.28.154:~/destiny-analytics/",
+    "clean": "rm -rf _player-reference-db",
     "start": "forever start -l da-forever.log -e da-stderr.log -o da-stdout.log injest.js",
     "stop": "forever stop injest.js",
     "dev": "node injest.js"
