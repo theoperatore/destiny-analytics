@@ -1,0 +1,1744 @@
+{
+  "Response": {
+    "data": {
+      "item": {
+        "itemHash": 616180714,
+        "bindStatus": 0,
+        "isEquipped": true,
+        "itemInstanceId": "6917529089331496008",
+        "itemLevel": 56,
+        "stackSize": 1,
+        "qualityLevel": 1,
+        "stats": [
+          {
+            "statHash": 144602215,
+            "value": 33,
+            "maximumValue": 0
+          },
+          {
+            "statHash": 1735777505,
+            "value": 22,
+            "maximumValue": 0
+          },
+          {
+            "statHash": 4244567218,
+            "value": 0,
+            "maximumValue": 0
+          }
+        ],
+        "primaryStat": {
+          "statHash": 3897883278,
+          "value": 361,
+          "maximumValue": 0
+        },
+        "canEquip": true,
+        "equipRequiredLevel": 40,
+        "unlockFlagHashRequiredToEquip": 2166136261,
+        "cannotEquipReason": 0,
+        "damageType": 0,
+        "damageTypeHash": 0,
+        "damageTypeNodeIndex": -1,
+        "damageTypeStepIndex": -1,
+        "progression": {
+          "dailyProgress": 0,
+          "weeklyProgress": 0,
+          "currentProgress": 121750,
+          "level": 11,
+          "step": 0,
+          "progressToNextLevel": 8700,
+          "nextLevelAt": 11900,
+          "progressionHash": 3306030760
+        },
+        "talentGridHash": 347016731,
+        "nodes": [
+          {
+            "isActivated": true,
+            "stepIndex": 2,
+            "state": 13,
+            "hidden": true,
+            "nodeHash": 0
+          },
+          {
+            "isActivated": true,
+            "stepIndex": 2,
+            "state": 10,
+            "hidden": false,
+            "nodeHash": 1
+          },
+          {
+            "isActivated": false,
+            "stepIndex": 2,
+            "state": 9,
+            "hidden": false,
+            "nodeHash": 2
+          },
+          {
+            "isActivated": true,
+            "stepIndex": 1,
+            "state": 10,
+            "hidden": false,
+            "nodeHash": 3
+          },
+          {
+            "isActivated": false,
+            "stepIndex": 1,
+            "state": 9,
+            "hidden": false,
+            "nodeHash": 4
+          },
+          {
+            "isActivated": true,
+            "stepIndex": 2,
+            "state": 10,
+            "hidden": false,
+            "nodeHash": 5
+          },
+          {
+            "isActivated": true,
+            "stepIndex": 0,
+            "state": 0,
+            "hidden": false,
+            "nodeHash": 6
+          },
+          {
+            "isActivated": true,
+            "stepIndex": 0,
+            "state": 13,
+            "hidden": true,
+            "nodeHash": 7
+          }
+        ],
+        "useCustomDyes": true,
+        "artRegions": {},
+        "isEquipment": true,
+        "isGridComplete": false,
+        "perks": [
+          {
+            "iconPath": "/common/destiny_content/icons/9556822cf2956e54d39410fd75b115e6.png",
+            "perkHash": 2448421045,
+            "isActive": true
+          },
+          {
+            "iconPath": "/common/destiny_content/icons/81baa0e19bcaffea1ab7a5dfcebf3196.png",
+            "perkHash": 2057818109,
+            "isActive": false
+          },
+          {
+            "iconPath": "/common/destiny_content/icons/9be98a8e276fd250b8186be0e397a2e1.png",
+            "perkHash": 2670306210,
+            "isActive": true
+          }
+        ],
+        "location": 1,
+        "transferStatus": 1,
+        "locked": false,
+        "lockable": true,
+        "objectives": [],
+        "state": 0
+      },
+      "talentNodes": [
+        {
+          "nodeIndex": 0,
+          "nodeHash": 0,
+          "state": 13,
+          "stateId": "Hidden",
+          "isActivated": true,
+          "stepIndex": 2,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 0,
+          "progressPercent": 100,
+          "hidden": true
+        },
+        {
+          "nodeIndex": 1,
+          "nodeHash": 1,
+          "state": 10,
+          "stateId": "Complete",
+          "isActivated": true,
+          "stepIndex": 2,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 0,
+          "progressPercent": 100,
+          "hidden": false
+        },
+        {
+          "nodeIndex": 2,
+          "nodeHash": 2,
+          "state": 9,
+          "stateId": "MustSwap",
+          "isActivated": false,
+          "stepIndex": 2,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 4,
+          "progressPercent": 100,
+          "hidden": false
+        },
+        {
+          "nodeIndex": 3,
+          "nodeHash": 3,
+          "state": 10,
+          "stateId": "Complete",
+          "isActivated": true,
+          "stepIndex": 1,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 0,
+          "progressPercent": 100,
+          "hidden": false
+        },
+        {
+          "nodeIndex": 4,
+          "nodeHash": 4,
+          "state": 9,
+          "stateId": "MustSwap",
+          "isActivated": false,
+          "stepIndex": 1,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 6,
+          "progressPercent": 100,
+          "hidden": false
+        },
+        {
+          "nodeIndex": 5,
+          "nodeHash": 5,
+          "state": 10,
+          "stateId": "Complete",
+          "isActivated": true,
+          "stepIndex": 2,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 0,
+          "progressPercent": 100,
+          "hidden": false
+        },
+        {
+          "nodeIndex": 6,
+          "nodeHash": 6,
+          "state": 0,
+          "stateId": "Invalid",
+          "isActivated": true,
+          "stepIndex": 0,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 0,
+          "progressPercent": 100,
+          "hidden": false
+        },
+        {
+          "nodeIndex": 7,
+          "nodeHash": 7,
+          "state": 13,
+          "stateId": "Hidden",
+          "isActivated": true,
+          "stepIndex": 0,
+          "materialsToUpgrade": [],
+          "activationGridLevel": 0,
+          "progressPercent": 100,
+          "hidden": true
+        }
+      ],
+      "statsOnNodes": {
+        "0": {
+          "currentNodeStats": [
+            {
+              "statHash": 1735777505,
+              "value": 22,
+              "maximumValue": 0
+            },
+            {
+              "statHash": 144602215,
+              "value": 23,
+              "maximumValue": 0
+            }
+          ],
+          "nextNodeStats": []
+        },
+        "1": {
+          "currentNodeStats": [
+            {
+              "statHash": 144602215,
+              "value": 10,
+              "maximumValue": 0
+            }
+          ],
+          "nextNodeStats": []
+        },
+        "2": {
+          "currentNodeStats": [],
+          "nextNodeStats": [
+            {
+              "statHash": 144602215,
+              "value": -10,
+              "maximumValue": 0
+            },
+            {
+              "statHash": 1735777505,
+              "value": 10,
+              "maximumValue": 0
+            }
+          ]
+        }
+      },
+      "characterStatsToDisplay": [
+        {
+          "statHash": 144602215,
+          "value": 302,
+          "maximumValue": 0
+        },
+        {
+          "statHash": 1735777505,
+          "value": 316,
+          "maximumValue": 0
+        },
+        {
+          "statHash": 4244567218,
+          "value": 91,
+          "maximumValue": 0
+        }
+      ],
+      "materialItemHashes": [],
+      "materialQuantities": {}
+    },
+    "definitions": {
+      "items": {
+        "616180714": {
+          "itemHash": 616180714,
+          "itemName": "Sunlit Shell",
+          "itemDescription": "For Ghosts who believe.",
+          "icon": "/common/destiny_content/icons/572f74fc907e80aecdcbf9ee4124ebf6.jpg",
+          "hasIcon": true,
+          "secondaryIcon": "/img/misc/missing_icon.png",
+          "actionName": "Dismantle",
+          "hasAction": true,
+          "deleteOnAction": true,
+          "tierTypeName": "Legendary",
+          "tierType": 5,
+          "itemTypeName": "Ghost Shell",
+          "bucketTypeHash": 4023194814,
+          "primaryBaseStatHash": 3897883278,
+          "stats": {
+            "2391494160": {
+              "statHash": 2391494160,
+              "value": 0,
+              "minimum": 0,
+              "maximum": 0
+            },
+            "3897883278": {
+              "statHash": 3897883278,
+              "value": 0,
+              "minimum": 0,
+              "maximum": 0
+            }
+          },
+          "perkHashes": [],
+          "specialItemType": 0,
+          "talentGridHash": 347016731,
+          "equippingBlock": {
+            "weaponSandboxPatternIndex": 2,
+            "gearArtArrangementIndex": -1,
+            "defaultDyes": [],
+            "lockedDyes": [
+              {
+                "channelHash": 4023194814,
+                "dyeHash": 4026644389
+              }
+            ],
+            "customDyes": [],
+            "customDyeExpression": {
+              "steps": []
+            },
+            "weaponPatternHash": 1948234786,
+            "arrangements": [],
+            "equipmentSlotHash": 4023194814
+          },
+          "hasGeometry": false,
+          "statGroupHash": 4023194814,
+          "itemLevels": [
+            0
+          ],
+          "qualityLevel": 0,
+          "equippable": true,
+          "instanced": true,
+          "rewardItemHash": 0,
+          "values": {},
+          "itemType": 2,
+          "itemSubType": 0,
+          "classType": 3,
+          "itemCategoryHashes": [
+            39,
+            20
+          ],
+          "sourceHashes": [],
+          "nonTransferrable": false,
+          "exclusive": 0,
+          "maxStackSize": 1,
+          "itemIndex": 0,
+          "setItemHashes": [],
+          "tooltipStyle": "",
+          "questlineItemHash": 0,
+          "needsFullCompletion": false,
+          "objectiveHashes": [],
+          "allowActions": true,
+          "questTrackingUnlockValueHash": 0,
+          "bountyResetUnlockHash": 0,
+          "uniquenessHash": 2166136261,
+          "showActiveNodesInTooltip": false,
+          "hash": 616180714,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "buckets": {
+        "4023194814": {
+          "bucketHash": 4023194814,
+          "bucketName": "Ghost",
+          "bucketDescription": "Shells used by your assistant and guide, the Ghost.",
+          "scope": 0,
+          "category": 3,
+          "bucketOrder": 45,
+          "bucketIdentifier": "BUCKET_GHOST",
+          "itemCount": 10,
+          "location": 1,
+          "hasTransferDestination": true,
+          "enabled": true,
+          "fifo": false,
+          "hash": 4023194814,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "stats": {
+        "144602215": {
+          "statHash": 144602215,
+          "statName": "Intellect",
+          "statDescription": "Decreases the cooldown of your super ability.\n\nIntellect can be increased by your Armor.",
+          "icon": "/common/destiny_content/icons/4adf87facc48d28dedb1cac4d217d63a.png",
+          "statIdentifier": "STAT_INTELLECT",
+          "aggregationType": 1,
+          "hasComputedBlock": true,
+          "interpolate": false,
+          "hash": 144602215,
+          "index": 0,
+          "redacted": false
+        },
+        "1735777505": {
+          "statHash": 1735777505,
+          "statName": "Discipline",
+          "statDescription": "Discipline decreases the cooldown time of your grenades, allowing you to use them more often.\n\nFind and equip armor with Discipline to boost this effect.",
+          "icon": "/common/destiny_content/icons/8fdae9a085d6b2c5de9276070d2b8912.png",
+          "statIdentifier": "STAT_DISCIPLINE",
+          "aggregationType": 1,
+          "hasComputedBlock": true,
+          "interpolate": false,
+          "hash": 1735777505,
+          "index": 0,
+          "redacted": false
+        },
+        "2391494160": {
+          "statHash": 2391494160,
+          "statName": "Light",
+          "statDescription": "Light increases your level, increasing the damage your abilities deal against higher-level enemies.",
+          "icon": "/common/destiny_content/icons/95147d76c2d9708221f1769b1d63893c.png",
+          "statIdentifier": "STAT_LIGHT",
+          "aggregationType": 0,
+          "hasComputedBlock": true,
+          "interpolate": false,
+          "hash": 2391494160,
+          "index": 0,
+          "redacted": false
+        },
+        "3897883278": {
+          "statHash": 3897883278,
+          "statName": "Defense",
+          "statDescription": "Reduces incoming damage from your enemies.",
+          "icon": "/img/theme/destiny/icons/icon_defense.png",
+          "statIdentifier": "STAT_DEFENSE",
+          "aggregationType": 2,
+          "hasComputedBlock": true,
+          "interpolate": false,
+          "hash": 3897883278,
+          "index": 0,
+          "redacted": false
+        },
+        "4244567218": {
+          "statHash": 4244567218,
+          "statName": "Strength",
+          "statDescription": "Strength reduces the cooldown time of your melee ability, allowing you to use it more often.\n\nFind and equip armor with Strength to boost this effect.",
+          "icon": "/common/destiny_content/icons/307b504a3f776bcca1354435f82b1b8c.png",
+          "statIdentifier": "STAT_STRENGTH",
+          "aggregationType": 1,
+          "hasComputedBlock": true,
+          "interpolate": false,
+          "hash": 4244567218,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "perks": {
+        "58719660": {
+          "perkHash": 58719660,
+          "displayName": "Spinmetal Extractor",
+          "displayDescription": "Chance to find additional spinmetal when looting engrams in the Cosmodrome.",
+          "displayIcon": "/common/destiny_content/icons/81baa0e19bcaffea1ab7a5dfcebf3196.png",
+          "isDisplayable": true,
+          "hash": 58719660,
+          "index": 0,
+          "redacted": false
+        },
+        "1160175599": {
+          "perkHash": 1160175599,
+          "displayName": "Titan Bounty",
+          "displayDescription": "Generate additional Glimmer when killing Titans in the Crucible.",
+          "displayIcon": "/common/destiny_content/icons/0dccd06a2e0a9044e625cb752e682010.png",
+          "isDisplayable": true,
+          "hash": 1160175599,
+          "index": 0,
+          "redacted": false
+        },
+        "1737781361": {
+          "perkHash": 1737781361,
+          "displayName": "Spirit Bloom Extractor",
+          "displayDescription": "Chance to find additional spirit blooms when looting engrams on Venus.",
+          "displayIcon": "/common/destiny_content/icons/81baa0e19bcaffea1ab7a5dfcebf3196.png",
+          "isDisplayable": true,
+          "hash": 1737781361,
+          "index": 0,
+          "redacted": false
+        },
+        "1870183033": {
+          "perkHash": 1870183033,
+          "displayName": "Spirit Bloom Sensor",
+          "displayDescription": "Detects and marks nearby spirit blooms.",
+          "displayIcon": "/common/destiny_content/icons/9556822cf2956e54d39410fd75b115e6.png",
+          "isDisplayable": true,
+          "hash": 1870183033,
+          "index": 0,
+          "redacted": false
+        },
+        "2057818109": {
+          "perkHash": 2057818109,
+          "displayName": "Relic Iron Extractor",
+          "displayDescription": "Chance to find additional relic iron when looting engrams on Mars.",
+          "displayIcon": "/common/destiny_content/icons/81baa0e19bcaffea1ab7a5dfcebf3196.png",
+          "isDisplayable": true,
+          "hash": 2057818109,
+          "index": 0,
+          "redacted": false
+        },
+        "2144441188": {
+          "perkHash": 2144441188,
+          "displayName": "Spinmetal Sensor",
+          "displayDescription": "Detects and marks nearby spinmetal formations.",
+          "displayIcon": "/common/destiny_content/icons/9556822cf2956e54d39410fd75b115e6.png",
+          "isDisplayable": true,
+          "hash": 2144441188,
+          "index": 0,
+          "redacted": false
+        },
+        "2448421045": {
+          "perkHash": 2448421045,
+          "displayName": "Relic Iron Sensor",
+          "displayDescription": "Detects and marks nearby relic iron formations.",
+          "displayIcon": "/common/destiny_content/icons/9556822cf2956e54d39410fd75b115e6.png",
+          "isDisplayable": true,
+          "hash": 2448421045,
+          "index": 0,
+          "redacted": false
+        },
+        "2670306210": {
+          "perkHash": 2670306210,
+          "displayName": "Warlock Bounty",
+          "displayDescription": "Generate additional Glimmer when killing Warlocks in the Crucible.",
+          "displayIcon": "/common/destiny_content/icons/9be98a8e276fd250b8186be0e397a2e1.png",
+          "isDisplayable": true,
+          "hash": 2670306210,
+          "index": 0,
+          "redacted": false
+        },
+        "2678818989": {
+          "perkHash": 2678818989,
+          "displayName": "Helium Extractor",
+          "displayDescription": "Chance to find additional helium filaments when looting engrams on the Moon.",
+          "displayIcon": "/common/destiny_content/icons/81baa0e19bcaffea1ab7a5dfcebf3196.png",
+          "isDisplayable": true,
+          "hash": 2678818989,
+          "index": 0,
+          "redacted": false
+        },
+        "2768191624": {
+          "perkHash": 2768191624,
+          "displayName": "Wormspore Sensor",
+          "displayDescription": "Detects and marks nearby wormspore clusters.",
+          "displayIcon": "/common/destiny_content/icons/9556822cf2956e54d39410fd75b115e6.png",
+          "isDisplayable": true,
+          "hash": 2768191624,
+          "index": 0,
+          "redacted": false
+        },
+        "3572254272": {
+          "perkHash": 3572254272,
+          "displayName": "Wormspore Extractor",
+          "displayDescription": "Chance to find additional wormspore when looting engrams on Oryx's Dreadnaught.",
+          "displayIcon": "/common/destiny_content/icons/81baa0e19bcaffea1ab7a5dfcebf3196.png",
+          "isDisplayable": true,
+          "hash": 3572254272,
+          "index": 0,
+          "redacted": false
+        },
+        "3733789933": {
+          "perkHash": 3733789933,
+          "displayName": "Hunter Bounty",
+          "displayDescription": "Generate additional Glimmer when killing Hunters in the Crucible.",
+          "displayIcon": "/common/destiny_content/icons/fa052ea5de1af71b0e7309655971323c.png",
+          "isDisplayable": true,
+          "hash": 3733789933,
+          "index": 0,
+          "redacted": false
+        },
+        "4182717269": {
+          "perkHash": 4182717269,
+          "displayName": "Helium Filament Sensor",
+          "displayDescription": "Detects and marks nearby helium filament collectors.",
+          "displayIcon": "/common/destiny_content/icons/9556822cf2956e54d39410fd75b115e6.png",
+          "isDisplayable": true,
+          "hash": 4182717269,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "talentGrids": {
+        "347016731": {
+          "gridHash": 347016731,
+          "maxGridLevel": 0,
+          "gridLevelPerColumn": 0,
+          "progressionHash": 3306030760,
+          "nodes": [
+            {
+              "nodeIndex": 0,
+              "nodeHash": 0,
+              "row": 0,
+              "column": -1,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": true,
+              "lastStepRepeats": false,
+              "isRandom": true,
+              "randomActivationRequirement": {
+                "gridLevel": 0
+              },
+              "isRandomRepurchasable": false,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 0,
+                  "icon": "/img/misc/missing_icon.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 0,
+                    "materialRequirementHashes": []
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [
+                    4244567218,
+                    1735777505
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 1,
+                  "nodeStepHash": 0,
+                  "icon": "/img/misc/missing_icon.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 0,
+                    "materialRequirementHashes": []
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [
+                    4244567218,
+                    144602215
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 2,
+                  "nodeStepHash": 0,
+                  "icon": "/img/misc/missing_icon.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 0,
+                    "materialRequirementHashes": []
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [
+                    1735777505,
+                    144602215
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 1,
+              "nodeHash": 1,
+              "row": 0,
+              "column": 1,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": false,
+              "isRandom": true,
+              "randomActivationRequirement": {
+                "gridLevel": 0
+              },
+              "isRandomRepurchasable": false,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 1263323987,
+                  "nodeStepName": "Increase Discipline",
+                  "nodeStepDescription": "Increase the Discipline bonus provided by this piece of gear.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/0c4819e8f050a493d441d16e2305bc0d.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 3,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [
+                    1735777505
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 1,
+                  "nodeStepHash": 1034209669,
+                  "nodeStepName": "Increase Intellect",
+                  "nodeStepDescription": "Increase the Intellect bonus provided by this piece of gear.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/945e63872e7343c0eac3f79035d0bc6b.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 3,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [
+                    144602215
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 2,
+                  "nodeStepHash": 1034209669,
+                  "nodeStepName": "Increase Intellect",
+                  "nodeStepDescription": "Increase the Intellect bonus provided by this piece of gear.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/945e63872e7343c0eac3f79035d0bc6b.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 3,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [
+                    144602215
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [
+                2
+              ],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 2,
+              "nodeHash": 2,
+              "row": 1,
+              "column": 1,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": false,
+              "isRandom": true,
+              "randomActivationRequirement": {
+                "gridLevel": 0
+              },
+              "isRandomRepurchasable": false,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 193091484,
+                  "nodeStepName": "Increase Strength",
+                  "nodeStepDescription": "Increase the Strength bonus provided by this piece of gear.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/b77b28ab448f249476360a492f25a87e.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 4,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [
+                    4244567218
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 1,
+                  "nodeStepHash": 193091484,
+                  "nodeStepName": "Increase Strength",
+                  "nodeStepDescription": "Increase the Strength bonus provided by this piece of gear.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/b77b28ab448f249476360a492f25a87e.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 4,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [
+                    4244567218
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 2,
+                  "nodeStepHash": 1263323987,
+                  "nodeStepName": "Increase Discipline",
+                  "nodeStepDescription": "Increase the Discipline bonus provided by this piece of gear.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/0c4819e8f050a493d441d16e2305bc0d.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 4,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [
+                    1735777505
+                  ],
+                  "affectsQuality": false,
+                  "stepGroups": {
+                    "weaponPerformance": 0,
+                    "impactEffects": 0,
+                    "guardianAttributes": 1,
+                    "lightAbilities": 0,
+                    "damageTypes": 0
+                  },
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [
+                1
+              ],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 3,
+              "nodeHash": 3,
+              "row": 0,
+              "column": 2,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": false,
+              "isRandom": true,
+              "randomActivationRequirement": {
+                "gridLevel": 0
+              },
+              "isRandomRepurchasable": false,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 299232902,
+                  "nodeStepName": "Spinmetal Sensor",
+                  "nodeStepDescription": "Detects and marks nearby spinmetal formations.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3dfb8856c72c47ea301123df79f41256.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 5,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    2144441188
+                  ],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 1,
+                  "nodeStepHash": 1588161800,
+                  "nodeStepName": "Relic Iron Sensor",
+                  "nodeStepDescription": "Detects and marks nearby relic iron formations.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3dfb8856c72c47ea301123df79f41256.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 5,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    2448421045
+                  ],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 2,
+                  "nodeStepHash": 1680096003,
+                  "nodeStepName": "Helium Filament Sensor",
+                  "nodeStepDescription": "Detects and marks nearby helium filament collectors.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3dfb8856c72c47ea301123df79f41256.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 5,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    4182717269
+                  ],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 3,
+                  "nodeStepHash": 3416859149,
+                  "nodeStepName": "Spirit Bloom Sensor",
+                  "nodeStepDescription": "Detects and marks nearby spirit blooms.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3dfb8856c72c47ea301123df79f41256.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 5,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    1870183033
+                  ],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 4,
+                  "nodeStepHash": 360038575,
+                  "nodeStepName": "Wormspore Sensor",
+                  "nodeStepDescription": "Detects and marks nearby wormspore clusters.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3dfb8856c72c47ea301123df79f41256.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 5,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    2768191624
+                  ],
+                  "startProgressionBarAtProgress": 17850,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [
+                4
+              ],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 4,
+              "nodeHash": 4,
+              "row": 1,
+              "column": 2,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": false,
+              "isRandom": true,
+              "randomActivationRequirement": {
+                "gridLevel": 0
+              },
+              "isRandomRepurchasable": false,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 3876517520,
+                  "nodeStepName": "Spinmetal Extractor",
+                  "nodeStepDescription": "Chance to find additional spinmetal when looting engrams in the Cosmodrome.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3e32e5516afb9e3af4714268b3439dfc.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 6,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    58719660
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 1,
+                  "nodeStepHash": 2527995470,
+                  "nodeStepName": "Relic Iron Extractor",
+                  "nodeStepDescription": "Chance to find additional relic iron when looting engrams on Mars.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3e32e5516afb9e3af4714268b3439dfc.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 6,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    2057818109
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 2,
+                  "nodeStepHash": 2628164125,
+                  "nodeStepName": "Helium Extractor",
+                  "nodeStepDescription": "Chance to find additional helium filaments when looting engrams on the Moon.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3e32e5516afb9e3af4714268b3439dfc.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 6,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    2678818989
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 3,
+                  "nodeStepHash": 1061337475,
+                  "nodeStepName": "Spirit Bloom Extractor",
+                  "nodeStepDescription": "Chance to find additional spirit blooms when looting engrams on Venus.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3e32e5516afb9e3af4714268b3439dfc.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 6,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    1737781361
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 4,
+                  "nodeStepHash": 3702628369,
+                  "nodeStepName": "Wormspore Extractor",
+                  "nodeStepDescription": "Chance to find additional wormspore when looting engrams on Oryx's Dreadnaught.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/3e32e5516afb9e3af4714268b3439dfc.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 6,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    3572254272
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [
+                3
+              ],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 5,
+              "nodeHash": 5,
+              "row": 0,
+              "column": 3,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": false,
+              "isRandom": true,
+              "randomActivationRequirement": {
+                "gridLevel": 0
+              },
+              "isRandomRepurchasable": false,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 1170859422,
+                  "nodeStepName": "Hunter Bounty",
+                  "nodeStepDescription": "Generate additional Glimmer when killing Hunters in the Crucible.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/ed21c68f6cda9cf90e73040de6e0c946.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 7,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    3733789933
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 1,
+                  "nodeStepHash": 3706137752,
+                  "nodeStepName": "Titan Bounty",
+                  "nodeStepDescription": "Generate additional Glimmer when killing Titans in the Crucible.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/59d8912e2d35c75d733d6a51b6d7458a.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 7,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    1160175599
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                },
+                {
+                  "stepIndex": 2,
+                  "nodeStepHash": 3105042433,
+                  "nodeStepName": "Warlock Bounty",
+                  "nodeStepDescription": "Generate additional Glimmer when killing Warlocks in the Crucible.",
+                  "interactionDescription": "Upgrade",
+                  "icon": "/common/destiny_content/icons/d6298386b9c4dd9c2755728904225852.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 7,
+                    "materialRequirementHashes": [
+                      579639550,
+                      579639551,
+                      579639548,
+                      579639549
+                    ]
+                  },
+                  "canActivateNextStep": false,
+                  "nextStepIndex": -1,
+                  "isNextStepRandom": true,
+                  "perkHashes": [
+                    2670306210
+                  ],
+                  "startProgressionBarAtProgress": 41650,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 6,
+              "nodeHash": 6,
+              "row": 0,
+              "column": 0,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": true,
+              "isRandom": false,
+              "isRandomRepurchasable": true,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 1270552711,
+                  "nodeStepName": "Infuse",
+                  "nodeStepDescription": "Consume a more powerful Ghost Shell to boost the Defense value of this Ghost Shell.",
+                  "interactionDescription": "Choose Item",
+                  "icon": "/common/destiny_content/icons/67cc3f11195491b2eb608bacc9c86158.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 0,
+                    "materialRequirementHashes": [
+                      3374022452
+                    ]
+                  },
+                  "canActivateNextStep": true,
+                  "nextStepIndex": 0,
+                  "isNextStepRandom": false,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            },
+            {
+              "nodeIndex": 7,
+              "nodeHash": 7,
+              "row": 1,
+              "column": 0,
+              "prerequisiteNodeIndexes": [],
+              "binaryPairNodeIndex": -1,
+              "autoUnlocks": false,
+              "lastStepRepeats": true,
+              "isRandom": false,
+              "isRandomRepurchasable": true,
+              "steps": [
+                {
+                  "stepIndex": 0,
+                  "nodeStepHash": 913963685,
+                  "nodeStepName": "Reforge Shell",
+                  "nodeStepDescription": "Changes the stats and upgrades available on this Ghost Shell.",
+                  "interactionDescription": "Twist",
+                  "icon": "/common/destiny_content/icons/9aafdf651a68e484a58efd25cb42b9db.png",
+                  "damageType": 0,
+                  "damageTypeHash": 0,
+                  "activationRequirement": {
+                    "gridLevel": 0,
+                    "materialRequirementHashes": [
+                      1987442646
+                    ]
+                  },
+                  "canActivateNextStep": true,
+                  "nextStepIndex": 0,
+                  "isNextStepRandom": false,
+                  "perkHashes": [],
+                  "startProgressionBarAtProgress": 0,
+                  "statHashes": [],
+                  "affectsQuality": false,
+                  "trueStepIndex": 0,
+                  "truePropertyIndex": 0,
+                  "affectsLevel": false
+                }
+              ],
+              "exlusiveWithNodes": [],
+              "randomStartProgressionBarAtProgression": 0,
+              "originalNodeHash": 0,
+              "talentNodeTypes": 0,
+              "exclusiveSetHash": 0,
+              "isRealStepSelectionRandom": false
+            }
+          ],
+          "calcMaxGridLevel": 0,
+          "calcProgressToMaxLevel": 0,
+          "exclusiveSets": [
+            {
+              "nodeIndexes": [
+                1,
+                2
+              ]
+            },
+            {
+              "nodeIndexes": [
+                3,
+                4
+              ]
+            }
+          ],
+          "independentNodeIndexes": [
+            5,
+            6,
+            7
+          ],
+          "maximumRandomMaterialRequirements": 0,
+          "hash": 347016731,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "statGroups": {
+        "4023194814": {
+          "statGroupHash": 4023194814,
+          "maximumValue": 0,
+          "uiPosition": 0,
+          "scaledStats": [
+            {
+              "statHash": 144602215,
+              "maximumValue": 0,
+              "displayAsNumeric": true,
+              "displayInterpolation": [
+                {
+                  "value": 0,
+                  "weight": 0
+                },
+                {
+                  "value": 10000,
+                  "weight": 10000
+                }
+              ]
+            },
+            {
+              "statHash": 1735777505,
+              "maximumValue": 0,
+              "displayAsNumeric": true,
+              "displayInterpolation": [
+                {
+                  "value": 0,
+                  "weight": 0
+                },
+                {
+                  "value": 10000,
+                  "weight": 10000
+                }
+              ]
+            },
+            {
+              "statHash": 4244567218,
+              "maximumValue": 0,
+              "displayAsNumeric": true,
+              "displayInterpolation": [
+                {
+                  "value": 0,
+                  "weight": 0
+                },
+                {
+                  "value": 10000,
+                  "weight": 10000
+                }
+              ]
+            }
+          ],
+          "overrides": {},
+          "hash": 4023194814,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "progressionMappings": {},
+      "itemCategories": {
+        "20": {
+          "itemCategoryHash": 20,
+          "identifier": "CATEGORY_ARMOR",
+          "visible": false,
+          "title": "Armor",
+          "shortTitle": "Armor",
+          "description": "",
+          "grantDestinyItemType": 0,
+          "grantDestinySubType": 0,
+          "grantDestinyClass": 0,
+          "hash": 20,
+          "index": 0,
+          "redacted": false
+        },
+        "39": {
+          "itemCategoryHash": 39,
+          "identifier": "CATEGORY_GHOST",
+          "visible": false,
+          "title": "Ghost",
+          "shortTitle": "Ghost",
+          "description": "Cosmetic shells for your Ghost.",
+          "grantDestinyItemType": 0,
+          "grantDestinySubType": 0,
+          "grantDestinyClass": 0,
+          "hash": 39,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "sources": {},
+      "objectives": {},
+      "progressions": {
+        "3306030760": {
+          "progressionHash": 3306030760,
+          "name": "ghost_superior",
+          "scope": 2,
+          "repeatLastStep": true,
+          "icon": "/common/destiny_content/icons/9da56a8be76e781c2818922e0ce619ee.png",
+          "steps": [
+            {
+              "progressTotal": 0,
+              "rewardItems": []
+            },
+            {
+              "progressTotal": 5950,
+              "rewardItems": []
+            },
+            {
+              "progressTotal": 11900,
+              "rewardItems": []
+            }
+          ],
+          "visible": true,
+          "hash": 3306030760,
+          "index": 0,
+          "redacted": false
+        }
+      },
+      "damageTypes": {},
+      "materialRequirements": {},
+      "unlockValues": {},
+      "vendorDetails": {},
+      "locations": {},
+      "factions": {},
+      "events": {},
+      "vendorCategories": {},
+      "vendorSummaries": {},
+      "destinations": {},
+      "activities": {},
+      "books": {},
+      "places": {},
+      "activityTypes": {},
+      "activityBundles": {},
+      "flags": {}
+    }
+  },
+  "ErrorCode": 1,
+  "ThrottleSeconds": 0,
+  "ErrorStatus": "Success",
+  "Message": "Ok",
+  "MessageData": {}
+}

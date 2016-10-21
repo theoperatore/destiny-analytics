@@ -1,0 +1,23 @@
+{
+  "name": "destiny-analytics-poller",
+  "version": "1.0.0",
+  "description": "Polls REST endpoints for data",
+  "main": "createPoller.js",
+  "author": "Alex Petersen <theoperatore@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "tape ./test/**/*.spec.js | tap-spec",
+    "clear-db": "rm -rf _player-reference-db"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "level": "^1.5.0",
+    "node-cron": "^1.1.2",
+    "node-fetch": "^1.6.3",
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
+  }
+}

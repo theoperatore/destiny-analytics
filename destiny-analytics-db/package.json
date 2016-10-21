@@ -1,0 +1,14 @@
+{
+  "name": "destiny-analytics-db",
+  "version": "1.0.0",
+  "description": "Interface with firebase for destiny querying",
+  "main": "createDb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Petersen <theoperatore@gmail.com> (http://anpetersen.me)",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^3.5.0"
+  }
+}
