@@ -1,13 +1,13 @@
 {
   "name": "destiny-analytics-poller",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Polls REST endpoints for data",
   "main": "createPoller.js",
   "author": "Alex Petersen <theoperatore@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "tape ./test/**/*.spec.js | tap-spec",
-    "clear-db": "rm -rf _player-reference-db"
+    "clear-db": "rm -rf _player-ref-db"
   },
   "dependencies": {
     "debug": "^2.2.0",

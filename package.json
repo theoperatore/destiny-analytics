@@ -1,0 +1,16 @@
+{
+  "name": "destiny-analytics",
+  "version": "1.0.0",
+  "description": "easy starting of analytics polling daemon",
+  "author": "theoperatore <theoperatore@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "cd analytics-api && yarn install",
+    "clean": "rm -rf _player-ref-db _polling-ref-db",
+    "dev-service": "yarn run clean && node analytics-api/server.js",
+    "start": "forever start -l da-svr.log -e da-svr-err.log -o da-svr.log analytics-api/server.js"
+  },
+  "dependencies": {
+    "forever": "^0.15.2"
+  }
+}

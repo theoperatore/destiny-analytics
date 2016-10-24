@@ -29,22 +29,33 @@ module.exports = function createPoller(destinyApiKey) {
     getAllJobIds() {
       return Object.keys(jobs);
     },
+    getIdForUsername(username) {
+      return Object.keys(jobs).filter(key => jobs[key].username === username)[0];
+    },
     schedule(username, options, requestCallback) {
       const id = uuid.v1();
       const task = requestFactory(id, username, options, requestCallback);
 
       debug('creating job: %s : %s', username, id);
-      jobs[id] = cron.schedule(`${scheduler.next().value} * * * *`, task);
-
-      return function off() {
-        debug('destroying job: %s', id);
-        jobs[id].destroy();
-        delete jobs[id];
-        return true;
+      jobs[id] = {
+        job: cron.schedule(`${scheduler.next().value} * * * *`, task),
+        username,
       }
+
+      return id;
     },
-    remove(id) {
-      const isRemoved = !!(jobs[id] && jobs[id].destroy());
+    start(id) {
+      const isStarted = !!(jobs[id] && jobs[id].job.start());
+      debug('starting job: %s, %s', id, isStarted);
+      return isStarted;
+    },
+    stop(id) {
+      const isStopped = !!(jobs[id] && jobs[id].job.stop());
+      debug('stopping job: %s %s', id, isStopped);
+      return isStopped;
+    },
+    destroy(id) {
+      const isRemoved = !!(jobs[id] && jobs[id].job.destroy());
 
       if (isRemoved) {
         debug('destroying job: %s', id);

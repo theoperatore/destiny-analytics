@@ -58,6 +58,14 @@ function getRange(db, path, _from, _to) {
 
 }
 
+function getAtPath(path) {
+  return firebase
+    .database()
+    .ref()
+    .child(path)
+    .once('value');
+}
+
 module.exports = function createDb({ apiKey, authDomain, databaseURL, storageBucket }) {
   const db = firebase.initializeApp({
     apiKey,

@@ -46,7 +46,7 @@ function createGet(db) {
 }
 
 module.exports = function createStorage() {
-  const db = levelup('./_player-reference-db', { valueEncoding: 'json' });
+  const db = levelup('./_player-ref-db', { valueEncoding: 'json' });
   const get = createGet(db);
   const put = createPut(db);
 
