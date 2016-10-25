@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "debug": "^2.2.0",
     "destiny-analytics-service": "file:../analytics-service",
     "express": "^4.14.0",

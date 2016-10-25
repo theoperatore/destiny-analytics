@@ -3,6 +3,7 @@
 const daService = require('destiny-analytics-service');
 const Router = require('express').Router;
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const debug = require('debug')('da:routes');
 
 class ValidationError extends Error {
@@ -67,6 +68,7 @@ module.exports = function createV1Api(creds) {
 
   bootstrap(svc);
 
+  api.use(cors());
   api.use(bodyParser.json());
   api.post('/schedule', (req, res) => {
     return validatePost('username', req.body.username)
