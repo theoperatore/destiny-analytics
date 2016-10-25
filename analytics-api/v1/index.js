@@ -3,6 +3,7 @@
 const daService = require('destiny-analytics-service');
 const Router = require('express').Router;
 const bodyParser = require('body-parser');
+const debug = require('debug')('da:routes');
 
 class ValidationError extends Error {
   constructor(message) {
@@ -38,9 +39,33 @@ function createOkResponse(obj) {
   }
 }
 
+// THIS IS LITERALLY HERE SO I DON'T HAVE TO HAND CODE NETWORK REQUESTS EACH
+// TIME I DEPLOY A NEW VERSION...
+function bootstrap(svc) {
+  debug('bootstrapping');
+  svc
+    .ready()
+    .then(() => {
+      return Promise.all([
+        'Abersoto',
+        'Veeridmoth',
+        'OhHeckYes',
+        'TheHurtWaffle',
+        'MelanomaAIDS',
+        'MrClean157',
+      ]
+      .map(psn => svc.schedule(psn)));
+    })
+    .then(() => {
+      debug('bootstrapping done');
+    })
+}
+
 module.exports = function createV1Api(creds) {
   const api = Router();
   const svc = daService(creds);
+
+  bootstrap(svc);
 
   api.use(bodyParser.json());
   api.post('/schedule', (req, res) => {

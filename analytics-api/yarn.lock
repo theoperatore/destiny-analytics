@@ -316,7 +316,7 @@ depd@~1.1.0:
     node-uuid "^1.4.7"
 
 "destiny-analytics-service@file:../analytics-service":
-  version "1.0.6"
+  version "1.0.7"
   dependencies:
     debug "^2.2.0"
     destiny-analytics-db "file:../analytics-db"
@@ -479,8 +479,8 @@ finalhandler@0.5.0:
     unpipe "~1.0.0"
 
 firebase@^3.5.0:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-3.5.1.tgz#1e689252f1b74985b4e18d052662eb4a01b5cfd2"
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-3.5.2.tgz#c7ab9ab0ad30bc4d4b8499c1778180a451b54653"
   dependencies:
     dom-storage "2.0.2"
     faye-websocket "0.9.3"
