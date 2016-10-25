@@ -8,6 +8,12 @@ import React, { Component } from 'react';
 // start with a basic line chart of snapshots of the current day
 // to now of k/d.
 
+// think about:
+// - moving everyting in state to container folders;
+//   - reducer/action files next to where they're used by the components
+// - redux-router; need it? need some sort of routing...
+// - react-redux; need it? either let App handle it, or use it
+
 
 class App extends Component {
   render() {
