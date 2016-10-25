@@ -30,11 +30,8 @@ export function fetchAllSchedules() {
         } else {
           dispatch(errorSchedules(res.message));
         }
-
-        console.log(res);
       })
       .catch(err => {
-        console.log(err);
         dispatch(errorSchedules(err.message));
       });
   }
