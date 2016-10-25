@@ -103,7 +103,10 @@ module.exports = function createService(creds) {
         storage
           .createReadStream({ valueEncoding: 'json'})
           .on('data', data => {
-            agg.push({ username: data.key, id: data.value.id, isStarted: data.value.isStarted });
+            const pollerId = poller.getIdForUsername(data.key);
+            if (pollerId) {
+              agg.push({ username: data.key, id: data.value.id, isStarted: data.value.isStarted });
+            }
           })
           .on('error', function (err) {
             reject(err);
