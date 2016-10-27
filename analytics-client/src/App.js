@@ -83,7 +83,7 @@ class App extends Component {
       </header>
       <div className='app-body'>
         {this.renderRoute()}
-        <footer>Thanks Bungie for not rate-limiting the app :)</footer>
+        <footer>I &#10084; Bungie</footer>
       </div>
     </main>
   }

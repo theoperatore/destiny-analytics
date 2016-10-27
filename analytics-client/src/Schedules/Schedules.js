@@ -31,8 +31,8 @@ export default class Schedules extends Component {
     this.props.dispatch(fetchAllSchedules());
   }
 
-  handleScheduleSelect(sched) {
-    console.log(sched);
+  handleScheduleSelect(sched, meta) {
+    console.log(meta);
   }
 
   renderSchedules() {
@@ -42,7 +42,7 @@ export default class Schedules extends Component {
           sched.meta.map((meta, j) => {
             return <Schedule
               key={`${i}${j}`}
-              onClick={this.handleScheduleSelect.bind(this, sched)}
+              onClick={this.handleScheduleSelect.bind(this, sched, meta)}
               name={sched.username}
               emblem={meta.emblemPath}
               background={meta.backgroundPath}

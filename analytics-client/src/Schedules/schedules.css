@@ -1,5 +1,6 @@
 .schedules {
-  /*padding: 5px;*/
+  padding: 5px;
+  overflow-x: hidden;
 }
 
 .player-schedules {
@@ -15,6 +16,11 @@
   color: #fff;
   margin-bottom: 1px;
   min-width: 250px;
+  transition: transform 300ms ease;
+}
+
+.schedule:hover {
+  transform: scale(1.1);
 }
 
 .schedule-meta {
