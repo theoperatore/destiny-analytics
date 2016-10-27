@@ -1,3 +1,26 @@
 .schedules {
-  padding: 5px;
+  /*padding: 5px;*/
+}
+
+.player-schedules {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.schedule {
+  flex-grow: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 1px;
+  min-width: 250px;
+}
+
+.schedule-meta {
+  margin-left: 5px;
+}
+
+.schedule-meta p {
+  line-height: 1.4;
 }
