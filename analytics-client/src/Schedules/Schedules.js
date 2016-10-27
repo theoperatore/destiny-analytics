@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { fetchAllSchedules } from '../state/schedules/actions';
 
+import './schedules.css';
+
 export default class Schedules extends Component {
   componentDidMount() {
     this.props.dispatch(fetchAllSchedules());
@@ -13,7 +15,7 @@ export default class Schedules extends Component {
   }
 
   render() {
-    return <div>
+    return <div className='schedules'>
       {
         this.props.scheduleStatus.loading
           ? <p>Loading...</p>

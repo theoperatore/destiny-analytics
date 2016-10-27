@@ -1,6 +1,6 @@
 {
   "name": "destiny-analytics-poller",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Polls REST endpoints for data",
   "main": "createPoller.js",
   "author": "Alex Petersen <theoperatore@gmail.com>",

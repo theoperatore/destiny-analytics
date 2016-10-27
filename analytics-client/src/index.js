@@ -19,8 +19,6 @@ store.subscribe(() => {
   )
 })
 
-store.dispatch({ type: 'fetchSchedules' });
-
 render(
   <App store={store} dispatch={store.dispatch} />,
   mount

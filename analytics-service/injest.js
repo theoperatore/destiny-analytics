@@ -105,7 +105,16 @@ module.exports = function createService(creds) {
           .on('data', data => {
             const pollerId = poller.getIdForUsername(data.key);
             if (pollerId) {
-              agg.push({ username: data.key, id: data.value.id, isStarted: data.value.isStarted });
+              agg.push(
+                poller
+                  .getMembershipIdForUsername(data.key)
+                  .then(membershipId => ({
+                    username: data.key,
+                    scheduleId: data.value.id,
+                    isStarted: data.value.isStarted,
+                    membershipId,
+                  }))
+              );
             }
           })
           .on('error', function (err) {
@@ -113,7 +122,7 @@ module.exports = function createService(creds) {
             this.destroy();
           })
           .on('end', () => {
-            resolve(agg);
+            Promise.all(agg).then(resolve);
           });
       });
     },

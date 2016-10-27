@@ -78,9 +78,13 @@ class App extends Component {
 
   render() {
     return <main>
-      <h1>Some Destiny Analytics Header</h1>
-      {this.renderRoute()}
-      <footer>some footer thing</footer>
+      <header>
+        <h1>Destiny Stat Analysis</h1>
+      </header>
+      <div className='app-body'>
+        {this.renderRoute()}
+        <footer>Thanks Bungie for not rate-limiting the app :)</footer>
+      </div>
     </main>
   }
 }
