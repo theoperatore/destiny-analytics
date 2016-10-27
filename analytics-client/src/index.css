@@ -4,7 +4,6 @@ body {
   font-family: sans-serif;
   font-size: 14px;
   color: #555;
-  /*background-color: #333;*/
 }
 
 * {
@@ -32,18 +31,23 @@ main {
 
 header {
   display: flex;
-  height: 50px;
+  min-height: 50px;
   align-items: center;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0, 0.45);
+  z-index: 2;
 }
 
 header h1 {
   font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
 }
 
 .app-body {
   flex-grow: 1;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 footer {

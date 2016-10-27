@@ -1,11 +1,16 @@
 .schedules {
-  padding: 5px;
-  overflow-x: hidden;
+  overflow: hidden;
+  margin-top: 5px;
 }
 
 .player-schedules {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.player-schedules:last-of-type {
+  margin-bottom: 0;
 }
 
 .schedule {
@@ -19,8 +24,14 @@
   transition: transform 300ms ease;
 }
 
-.schedule:hover {
-  transform: scale(1.1);
+@media screen and (min-width: 750px) {
+  .schedule:hover {
+    transform: scale(1.1);
+  }
+
+  .player-schedules {
+    margin-bottom: 0px;
+  }
 }
 
 .schedule-meta {

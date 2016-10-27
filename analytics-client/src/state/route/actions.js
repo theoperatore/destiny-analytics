@@ -1,7 +1,7 @@
-export function changeRoute(path, param) {
+export function changeRoute(path, params) {
   return {
     type: 'changeRoute',
     path,
-    param,
+    params,
   }
 }

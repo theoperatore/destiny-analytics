@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Schedules from './Schedules/Schedules';
 import { changeRoute } from './state/route/actions';
+import { parseHash, routes } from './routing';
 
 
 // HEY AL, create a mock for the scheduling service.
@@ -16,53 +17,26 @@ import { changeRoute } from './state/route/actions';
 //   - reducer/action files next to where they're used by the components
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.routeParams = {
-      'players': /#\/players\/([0-9-A-z]+)/,
-    }
-  }
-
   componentDidMount() {
+
+    // initial routing taken care of in the route reducer as initial path/params
     window.addEventListener('hashchange', () => {
-      const { path, param } = this.parseHash();
-      this.props.dispatch(changeRoute(path, param));
+      const { path, params } = parseHash(window.location.hash);
+      this.props.dispatch(changeRoute(path, params));
     })
-
-    // initial routing
-    const { path, param } = this.parseHash();
-    this.props.dispatch(changeRoute(path, param));
-  }
-  
-  parseHash() {
-    const rawPath = window.location.hash;
-
-    const routePartial = Object
-      .keys(this.routeParams)
-      .filter(routePartial => rawPath.match(routePartial))[0];
-
-    const matches = routePartial
-     ? this.routeParams[routePartial].exec(rawPath) || []
-     : [];
-
-    const param = matches[1];
-    const almostPath = rawPath.replace(param, '');
-
-    const path = almostPath.charAt(almostPath.length - 1) === '/'
-      ? almostPath.slice(0, almostPath.length - 1)
-      : almostPath;
-
-    return { path, param };
   }
 
   renderRoute() {
     const state = this.props.store.getState();
-    const { path, param } = state.route;
+    const { path, params } = state.route;
+    const { playerSummary, characterSummary } = routes;
 
     switch (path) {
-      case '#/players':
-        return <p>Load a player using some id: {param}</p>
+      case playerSummary:
+        return <p>Load a player using some id: {params.membershipId}</p>
+
+      case characterSummary:
+        return <p>Loading a character... {params.membershipId} - {params.characterId}</p>
 
       // home
       default: {

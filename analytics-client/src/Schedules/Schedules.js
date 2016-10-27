@@ -32,10 +32,17 @@ export default class Schedules extends Component {
   }
 
   handleScheduleSelect(sched, meta) {
-    console.log(meta);
+    window.location.hash = `#/players/${sched.membershipId}/characters/${meta.characterId}`;
   }
 
   renderSchedules() {
+    if (this.props.scheduleStatus.error) {
+      return <div>
+        <p>Error retrieving schedules: {this.props.scheduleStatus.error}</p>
+        <button onClick={() => this.props.dispatch(fetchAllSchedules())}>try again</button>
+      </div>
+    }
+
     return this.props.schedules.map((sched, i) => {
       return <div className='player-schedules' key={i}>
         {
