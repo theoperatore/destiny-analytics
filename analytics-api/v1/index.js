@@ -116,7 +116,11 @@ module.exports = function createV1Api(creds) {
       .then(schedules => {
         return Promise.all(schedules.map(sched => {
           return sched.membershipId
-            ? fetch(`http://www.bungie.net/Platform/Destiny/2/Account/${sched.membershipId}/Summary/`)
+            ? fetch(`http://www.bungie.net/Platform/Destiny/2/Account/${sched.membershipId}/Summary/`, {
+                headers: {
+                  'X-Api-Key': creds.destinyApiKey,
+                },
+              })
                 .then(response => response.json())
                 .then(response => response.Response && response.Response.data.characters.map(char => ({ 
                   emblemPath: char.emblemPath,
@@ -129,6 +133,10 @@ module.exports = function createV1Api(creds) {
           return schedules.map((sched, i) => Object.assign({}, sched, {
             meta: charactersPerSchedule[i],
           }));
+        })
+        .catch(err => {
+          debug('got error requsting summary: %o', err);
+          return schedules;
         })
       })
       .then(schedules => {
