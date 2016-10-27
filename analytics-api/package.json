@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "REST api service to interact with the destiny polling mechanism",
   "main": "server.js",
   "author": "Alex Petersen <theoperatore@gmail.com>",
@@ -11,6 +11,7 @@
     "debug": "^2.2.0",
     "destiny-analytics-service": "file:../analytics-service",
     "express": "^4.14.0",
-    "localenv": "^0.2.2"
+    "localenv": "^0.2.2",
+    "node-fetch": "^1.6.3"
   }
 }
