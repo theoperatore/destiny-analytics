@@ -31,11 +31,6 @@ export default class Character extends Component {
   }
 
   renderChart() {
-    const style = {
-      backgroundImage: `url(https://bungie.net${this.props.schedule.meta && this.props.schedule.meta.backgroundPath})`,
-      backgroundRepeat: 'no-repeat',
-    }
-
     return <div className='analytics-chart'>
       <h4>{this.props.schedule.meta && this.props.schedule.meta.className}</h4>
       <LineChart
