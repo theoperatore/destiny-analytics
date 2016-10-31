@@ -1,32 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { fetchAllSchedules } from '../state/schedules/actions';
+import Schedule from './Schedule';
 
 import './schedules.css';
 
-function Schedule(props) {
-  const style = {
-    backgroundImage: `url(https://bungie.net${props.background})`,
-    backgroundRepeat: 'no-repeat',
-  }
-  return <div
-    className='schedule'
-    onClick={props.onClick}
-    style={style}
-  >
-    <img
-      src={`https://bungie.net${props.emblem}`}
-      width='75'
-      height='75'
-      alt='destiny-class-emblem'
-    />
-    <div className='schedule-meta'>
-      <p>{props.name}</p>
-      <p>{props.dclass}</p>
-    </div>
-  </div>
-}
-
 export default class Schedules extends Component {
+  static PropTypes = {
+    dispatch: PropTypes.func.isRequired,
+    schedules: PropTypes.array.isRequired,
+    scheduleStatus: PropTypes.object.isRequired,
+  }
+
   componentDidMount() {
     this.props.dispatch(fetchAllSchedules());
   }
@@ -68,6 +52,7 @@ export default class Schedules extends Component {
           ? <p>Loading schedule meta data...</p>
           : this.renderSchedules()
       }
+      <footer>I &#10084; Bungie</footer>
     </div>
   }
 }

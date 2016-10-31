@@ -6,7 +6,13 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "d3-axis": "^1.0.3",
+    "d3-scale": "^1.0.3",
+    "d3-selection": "^1.0.2",
+    "d3-shape": "^1.0.3",
+    "debug": "^2.2.0",
     "destiny-analytics-db": "file:../analytics-db",
+    "moment": "^2.15.2",
     "path-to-regexp": "^1.6.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

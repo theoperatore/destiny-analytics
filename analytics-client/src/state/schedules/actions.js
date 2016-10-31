@@ -19,11 +19,10 @@ function errorSchedules(msg) {
 }
 
 export function fetchAllSchedules() {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch(fetchSchedules());
 
-    // fetch(`${process.env.REACT_APP_SCHEDULE_SVR}/schedule`)
-    fetch('http://unimatrix-zero.local:9000/v1/schedule')
+    fetch(`${process.env.REACT_APP_SCHEDULE_SVR}/schedule`)
       .then(res => res.json())
       .then(res => {
         if (res.response && res.response.schedules) {

@@ -43,8 +43,8 @@ export function parseHash(rawPath) {
     params: match
       .results
       .slice(1)
-      .map((data, idx) => ({
-        [viewToKeys[match.path][idx].name]: data,
+      .map((param, idx) => ({
+        [viewToKeys[match.path][idx].name]: param,
       }))
       .reduce((agg, val) => Object.assign(agg, val), {}),
   };

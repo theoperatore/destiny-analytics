@@ -1,0 +1,41 @@
+.analytics {
+  display: flex;
+  height: 100%;
+}
+
+.analytics-nav {
+  width: 100px;
+  display: flex;
+  padding: 10px;
+  flex-flow: column;
+  align-items: center;
+  border-right: 1px solid #ddd;
+}
+
+.analytics-nav .btn-big {
+  font-size: 25px;
+}
+
+.analytics-nav .btn.active {
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.analytics-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow: auto;
+}
+
+.analytics-chart {
+  margin-top: 35px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.loading {
+  align-self: center;
+  font-size: 50px;
+}

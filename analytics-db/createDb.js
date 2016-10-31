@@ -40,7 +40,7 @@ function push(db, path, data) {
 }
 
 function getRange(db, path, _from, _to) {
-  const end = _to || new Date().toISOString();
+  const end = typeof _to === 'string' ? _to : new Date().toISOString();
   const ref = firebase
     .database()
     .ref()
@@ -53,7 +53,7 @@ function getRange(db, path, _from, _to) {
       .endAt(end)
       .once('value')
     : ref
-      .limitToLast()
+      .limitToLast(1)
       .once('value');
 
 }
