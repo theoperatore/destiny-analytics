@@ -3,9 +3,6 @@
   "version": "1.0.9",
   "description": "A service that will save (via destiny-analytics-db) destiny character data over time for analytics",
   "main": "injest.js",
-  "scripts": {
-    "old-deploy": "scp -r lib/* root@104.131.28.154:~/destiny-analytics/"
-  },
   "author": "Alex Petersen <theoperatore@gmail.com> (http://anpetersen.me)",
   "license": "MIT",
   "dependencies": {

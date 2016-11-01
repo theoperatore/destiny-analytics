@@ -10,7 +10,8 @@
     "dev-service": "yarn run clean && node analytics-api/server.js",
     "start": "yarn run clean && forever start --append -l da-svr.log -e da-svr-err.log -o da-svr.log analytics-api/server.js",
     "stop": "forever stop analytics-api/server.js",
-    "logs": "forever logs 0"
+    "logs": "forever logs 0",
+    "remote": "ssh root@104.131.28.154"
   },
   "dependencies": {
     "forever": "^0.15.2"
