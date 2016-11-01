@@ -1,6 +1,6 @@
 {
   "name": "destiny-analytics-db",
-  "version": "1.0.4",
+  "version": "1.1.4",
   "description": "Interface with firebase for destiny querying",
   "main": "createDb.js",
   "scripts": {

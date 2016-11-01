@@ -39,6 +39,18 @@ function push(db, path, data) {
     .push(dataToSend);
 }
 
+function set(db, path, data) {
+  const dataToSend = Object.assign({}, data, {
+    timestamp: new Date().toISOString(),
+  });
+
+  return firebase
+    .database()
+    .ref()
+    .child(path)
+    .set(data);
+}
+
 function getRange(db, path, _from, _to) {
   const end = typeof _to === 'string' ? _to : new Date().toISOString();
   const ref = firebase
@@ -79,5 +91,6 @@ module.exports = function createDb({ apiKey, authDomain, databaseURL, storageBuc
     authenticate: authenticate.bind(null, db),
     push: push.bind(null, db),
     getRange: getRange.bind(null, db),
+    set: set.bind(null, db),
   };
 }

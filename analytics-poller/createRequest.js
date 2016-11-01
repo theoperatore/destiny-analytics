@@ -17,6 +17,12 @@ const PVP_MODES = [
   'Lockdown',
 ];
 
+const classMap = {
+  '671679327': 'Hunter',
+  '2271682572': 'Warlock',
+  '3655393761': 'Titan'
+};
+
 // pause after an item request to not blast the bungie api; because I'm respectable!
 function itemRequestFactory(apiKey, type, membershipId, characterId) {
   return itemId => () => {
@@ -63,13 +69,11 @@ module.exports = function createRequest(storage, apiKey) {
 
           return membershipId
             ? membershipId
-            : destinyGateway.requestMembershipId(apiKey, opts.accountType, username)
-                .then(requestedMemId => {
-                  debug('storing membershipid: %s %s', username, requestedMemId);
-                  return storage
-                    .setMembershipId(username, requestedMemId)
-                    .then(() => requestedMemId)
-                });
+            : destinyGateway
+              .requestMembershipId(apiKey, opts.accountType, username)
+              .then(mem => storage
+                .setMembershipId(username, mem)
+                .then(() => mem));
         })
         .then(membershipId => {
           debug('requesting account summary...');
@@ -98,6 +102,12 @@ module.exports = function createRequest(storage, apiKey) {
                     }),
                   };
                 }),
+                characterMetas: summary.data.characters.map(char => ({
+                  emblemPath: char.emblemPath,
+                  backgroundPath: char.backgroundPath,
+                  className: classMap[char.characterBase.classHash],
+                  characterId: char.characterBase.characterId,
+                }))
               };
             });
         })
@@ -168,7 +178,7 @@ module.exports = function createRequest(storage, apiKey) {
                       bucketName: inventoryDefs.buckets[inventoryData.items[itmIdx].bucketHash].bucketName,
                       itemName: inventoryDefs.items[inventoryData.items[itmIdx].itemHash].itemName,
                       itemDescription: inventoryDefs.items[inventoryData.items[itmIdx].itemHash].itemDescription || '', // emblems don't have descriptions; firebase doesn't like undefined
-                      icon: inventoryDefs.items[inventoryData.items[itmIdx].itemHash].icon,
+                      icon: inventoryDefs.items[inventoryData.items[itmIdx].itemHash].icon || '',
                       stats: itm.data.item.stats.map(stat => ({
                         statName: itm.definitions.stats[stat.statHash].statName,
                         statDescription: itm.definitions.stats[stat.statHash].statDescription,
@@ -181,6 +191,15 @@ module.exports = function createRequest(storage, apiKey) {
               });
             });
           });
+        })
+        .then(snapshot => {
+          debug('caching snapshot metadata %s : %o', username, snapshot.characterMetas);
+          return storage
+            .cacheCharacterMeta(username, snapshot.characterMetas)
+            .then(() => {
+              debug('successfully cached');
+              return snapshot;
+            })
         })
         .then(snapshot => {
           if (cb) {

@@ -5,7 +5,23 @@ const storage = require('level')('_polling-ref-db', { valueEncoding: 'json' });
 const createDb = require('destiny-analytics-db');
 const createPoller = require('destiny-analytics-poller');
 
-// should all of this be passed from a higher order service?
+// storage sets username to scheduleId
+// poller uses storage to map username to data
+function saveMeta(db, membershipId, meta) {
+  return db.set(`/user/${membershipId}`, meta);
+}
+
+function pushPvP(db, membershipId) {
+  return (characterId, data) => () => db.push(`/pvp/${membershipId}/${characterId}`, { data });
+}
+
+function pushStats(db, membershipId) {
+  return (characterId, data) => () => db.push(`/stats/${membershipId}/${characterId}`, { data });
+}
+
+function pushItems(db, membershipId) {
+  return (characterId, data) => () => db.push(`/items/${membershipId}/${characterId}`, { data });
+}
 
 function onSnapshot(db, psn) {
   return (err, snapshot) => {
@@ -13,16 +29,36 @@ function onSnapshot(db, psn) {
     if (err) {
       debug('polling error: %o', err);
     } else {
-      db
-        .push(`/snapshots/${snapshot.membershipId}`, Object.assign({}, snapshot, {
-          psn,
-        }))
+
+      const meta = {
+        psn,
+        membershipId: snapshot.membershipId,
+        characterMetas: snapshot.characterMetas,
+      };
+
+      const pvpFactory = pushPvP(db, snapshot.membershipId);
+      const statsFactory = pushStats(db, snapshot.membershipId);
+      const itemsFactory = pushItems(db, snapshot.membershipId);
+
+      const pvp = snapshot.characterStats.map(cha => pvpFactory(cha.id, cha.pvp));
+      const stats = snapshot.characterStats.map(cha => statsFactory(cha.id, cha.stats));
+      const items = snapshot.characterStats.map(cha => itemsFactory(cha.id, cha.items));
+      const arr = [ pvp, stats, items ];
+
+      const requests = () => arr
+        .reduce((singleArr, arr) => singleArr.concat(arr), [])
+        .reduce((seq, request) => seq.then(() => request()), Promise.resolve());
+
+      debug('saving snapshot for user: %s', psn);
+      Promise.resolve()
+        .then(() => saveMeta(db, snapshot.membershipId, meta))
+        .then(() => requests())
         .then(() => {
-          debug('saved user to db: %s', psn);
+          debug('saved snapshot for user: %s', psn);
         })
         .catch(err => {
           debug('db error: %o', err);
-        })
+        });
     }
   }
 }
@@ -107,12 +143,13 @@ module.exports = function createService(creds) {
             if (pollerId) {
               agg.push(
                 poller
-                  .getMembershipIdForUsername(data.key)
-                  .then(membershipId => ({
+                  .getUserScheduleMeta(data.key)
+                  .then(cache => ({
                     username: data.key,
                     scheduleId: data.value.id,
                     isStarted: data.value.isStarted,
-                    membershipId,
+                    membershipId: cache.membershipId,
+                    meta: cache.meta,
                   }))
               );
             }
@@ -132,7 +169,16 @@ module.exports = function createService(creds) {
         .then(value => {
           debug('got result from storage: %o', value);
           if (value) {
-            if (value.isStarted) return value.id;
+            const pollerId = poller.getIdForUsername(username);
+            if (value.isStarted && pollerId) {
+              debug('username is already scheduled: %s %s %s', username, value.id, pollerId);
+              return value.id;
+            }
+
+            if (!pollerId) {
+              debug('username %s is saved, but is not scheduled, scheduling...', username);
+              return poller.schedule(username, onSnapshot(db, username));
+            }
 
             debug('username %s is scheduled, but not started. starting', username);
             if (poller.start(value.id)) {

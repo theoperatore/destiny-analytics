@@ -35,6 +35,16 @@ module.exports = function createPoller(destinyApiKey) {
     getMembershipIdForUsername(username) {
       return storage.getMembershipId(username);
     },
+    getUserScheduleMeta(username) {
+      return storage
+        .getMembershipId(username)
+        .then(membershipId => storage
+          .getCharacterCache(username)
+          .then(cache => ({
+            membershipId,
+            meta: cache || [],
+          })));
+    },
     schedule(username, options, requestCallback) {
       const id = uuid.v1();
       const task = requestFactory(id, username, options, requestCallback);

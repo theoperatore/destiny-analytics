@@ -53,6 +53,11 @@ module.exports = function createStorage() {
   return {
     normalizeUsername,
 
+    cacheCharacterMeta(username, info) {
+      const un = `${normalizeUsername(username)}-cache`;
+      debug('putting character cache %s: %o', un, info);
+      return put(un, info);
+    },
     setMembershipId(username, id) {
       const un = `${normalizeUsername(username)}-memid`;
       debug('putting membershipId %s : %s', un, id);
@@ -68,6 +73,11 @@ module.exports = function createStorage() {
       return put(memId, ids);
     },
 
+    getCharacterCache(username) {
+      const un = `${normalizeUsername(username)}-cache`;
+      debug('getting character cache %s', un);
+      return get(un);
+    },
     getMembershipId(username) {
       const un = `${normalizeUsername(username)}-memid`;
       debug('getting membershipId %s', un);
