@@ -31,12 +31,17 @@ export default class Character extends Component {
   }
 
   renderChart() {
+    const snapshots = this.props.characterData.map(snapshot => ({
+      x: snapshot.timestamp,
+      y: snapshot.characterStats.pvp[0].kd,
+    }));
+
     return <div className='analytics-chart'>
       <h4>{this.props.schedule.meta && this.props.schedule.meta.className}</h4>
       <LineChart
         xLabel={'time'}
         yLabel={'k/d'}
-        snapshots={this.props.characterData}
+        snapshots={snapshots}
       />
     </div>
   }

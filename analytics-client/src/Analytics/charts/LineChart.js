@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import { line } from 'd3-shape';
 import { scaleLinear, scaleTime } from 'd3-scale';
@@ -13,6 +13,15 @@ const marginLeft = 75;
 const marginRight = 10;
 
 export default class LineChart extends Component {
+  static PropTypes = {
+    snapshots: PropTypes.shape({
+      x: PropTypes.string, // date strings
+      y: PropTypes.integer,
+    }).isRequired,
+    xLabel: PropTypes.string,
+    yLabel: PropTypes.string,
+  }
+
   static defaultProps = {
     width: 650,
     height: 400,
@@ -37,8 +46,8 @@ export default class LineChart extends Component {
     const {
       startTime,
       endTime,
-      highestKd,
-      lowestKd,
+      highestY,
+      lowestY,
     } = this.extent();
 
     const computedWidth = width - marginLeft - marginRight;
@@ -55,18 +64,18 @@ export default class LineChart extends Component {
     this.heightScale = (!this.heightScale && height !== 0)
       ? scaleLinear()
           .range([computedHeight, marginTop])
-          .domain([lowestKd - (lowestKd * 0.01), highestKd + (highestKd * 0.01)])
+          .domain([lowestY - (lowestY * 0.01), highestY + (highestY * 0.01)])
       : this.heightScale
           .range([computedHeight, marginTop])
-          .domain([lowestKd - (lowestKd * 0.01), highestKd + (highestKd * 0.01)]);
+          .domain([lowestY - (lowestY * 0.01), highestY + (highestY * 0.01)]);
 
     this.pathGen = !this.pathGen
       ? line()
-        .x(snapshot => this.widthScale(+new Date(snapshot.timestamp)))
-        .y(snapshot => this.heightScale(snapshot.characterStats.pvp[0].kd))
+        .x(snapshot => this.widthScale(+new Date(snapshot.x)))
+        .y(snapshot => this.heightScale(snapshot.y))
       : this.pathGen
-        .x(snapshot => this.widthScale(+new Date(snapshot.timestamp)))
-        .y(snapshot => this.heightScale(snapshot.characterStats.pvp[0].kd));
+        .x(snapshot => this.widthScale(+new Date(snapshot.x)))
+        .y(snapshot => this.heightScale(snapshot.y));
 
     this.xAxis = axisBottom(this.widthScale);
     this.yAxis = axisLeft(this.heightScale);
@@ -82,26 +91,26 @@ export default class LineChart extends Component {
   extent() {
     let startTime = new Date().toISOString();
     let endTime = new Date(new Date().setYear(1973)).toISOString();
-    let highestKd = -Infinity;
-    let lowestKd = Infinity;
+    let highestY = -Infinity;
+    let lowestY = Infinity;
 
     this.props.snapshots.forEach(snapshot => {
-      startTime = snapshot.timestamp < startTime
-        ? snapshot.timestamp
+      startTime = snapshot.x < startTime
+        ? snapshot.x
         : startTime;
-      endTime = snapshot.timestamp > endTime
-        ? snapshot.timestamp
+      endTime = snapshot.x > endTime
+        ? snapshot.x
         : endTime;
 
-      highestKd = Math.max(highestKd, snapshot.characterStats.pvp[0].kd);
-      lowestKd = Math.min(lowestKd, snapshot.characterStats.pvp[0].kd);
+      highestY = Math.max(highestY, snapshot.y);
+      lowestY = Math.min(lowestY, snapshot.y);
     });
 
     return {
       startTime: +new Date(startTime),
       endTime: +new Date(endTime),
-      highestKd,
-      lowestKd,
+      highestY,
+      lowestY,
     }
   }
 
@@ -114,8 +123,7 @@ export default class LineChart extends Component {
       width={this.props.width}
       height={this.props.height}
     >
-      <g
-      >
+      <g>
         <path
           d={d}
           strokeWidth={2}
