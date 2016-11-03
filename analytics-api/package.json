@@ -11,7 +11,7 @@
     "debug": "^2.2.0",
     "destiny-analytics-db": "file:../analytics-db",
     "destiny-analytics-poller": "file:../analytics-poller",
-    "destiny-analytics-service": "file:../analytics-service",
+    "destiny-analytics-service": "file:../analytics-service/",
     "express": "^4.14.0",
     "localenv": "^0.2.2",
     "node-fetch": "^1.6.3"

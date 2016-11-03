@@ -321,8 +321,8 @@ depd@~1.1.0:
     node-fetch "^1.6.3"
     node-uuid "^1.4.7"
 
-"destiny-analytics-service@file:../analytics-service":
-  version "1.2.16"
+"destiny-analytics-service@file:../analytics-service/":
+  version "1.2.18"
   dependencies:
     debug "^2.2.0"
     destiny-analytics-db "file:../analytics-db"
@@ -474,15 +474,14 @@ faye-websocket@0.9.3:
   dependencies:
     websocket-driver ">=0.5.1"
 
-"file:../analytics-poller":
-  name destiny-analytics-poller
-  version "1.0.7"
+"file:../analytics-service/":
+  name destiny-analytics-service
+  version "1.2.18"
   dependencies:
     debug "^2.2.0"
+    destiny-analytics-db "file:../analytics-db"
+    destiny-analytics-poller "file:../analytics-poller"
     level "^1.5.0"
-    node-cron "^1.1.2"
-    node-fetch "^1.6.3"
-    node-uuid "^1.4.7"
 
 finalhandler@0.5.0:
   version "0.5.0"
