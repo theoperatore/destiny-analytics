@@ -28,9 +28,11 @@ function authenticate(db, email, pwd) {
 }
 
 function push(db, path, data) {
-  const dataToSend = Object.assign({}, data, {
-    timestamp: new Date().toISOString(),
-  });
+  const dataToSend = data.timestamp
+    ? Object.assign({}, data)
+    : Object.assign({}, data, {
+        timestamp: new Date().toISOString(),
+      });
 
   return firebase
     .database()
@@ -40,9 +42,11 @@ function push(db, path, data) {
 }
 
 function set(db, path, data) {
-  const dataToSend = Object.assign({}, data, {
-    timestamp: new Date().toISOString(),
-  });
+  const dataToSend = data.timestamp
+    ? Object.assign({}, data)
+    : Object.assign({}, data, {
+        timestamp: new Date().toISOString(),
+      });
 
   return firebase
     .database()
@@ -70,6 +74,16 @@ function getRange(db, path, _from, _to) {
 
 }
 
+function getAtTimestamp(db, path, timestamp) {
+  return firebase
+    .database()
+    .ref()
+    .child(path)
+    .orderByChild('timestamp')
+    .equalTo(timestamp)
+    .once('value');
+}
+
 function getAtPath(path) {
   return firebase
     .database()
@@ -87,10 +101,12 @@ module.exports = function createDb({ apiKey, authDomain, databaseURL, storageBuc
   });
 
   return {
-    getUser: getUser.bind(null, db),
     authenticate: authenticate.bind(null, db),
-    push: push.bind(null, db),
+    getAtPath: getAtPath.bind(null, db),
+    getAtTimestamp: getAtTimestamp.bind(null, db),
     getRange: getRange.bind(null, db),
+    getUser: getUser.bind(null, db),
+    push: push.bind(null, db),
     set: set.bind(null, db),
   };
 }

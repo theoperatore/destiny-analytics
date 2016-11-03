@@ -12,15 +12,15 @@ function saveMeta(db, membershipId, meta) {
 }
 
 function pushPvP(db, membershipId) {
-  return (characterId, data) => () => db.push(`/pvp/${membershipId}/${characterId}`, { data });
+  return (characterId, data, timestamp) => () => db.push(`/pvp/${membershipId}/${characterId}`, { data, timestamp });
 }
 
 function pushStats(db, membershipId) {
-  return (characterId, data) => () => db.push(`/stats/${membershipId}/${characterId}`, { data });
+  return (characterId, data, timestamp) => () => db.push(`/stats/${membershipId}/${characterId}`, { data, timestamp });
 }
 
 function pushItems(db, membershipId) {
-  return (characterId, data) => () => db.push(`/items/${membershipId}/${characterId}`, { data });
+  return (characterId, data, timestamp) => () => db.push(`/items/${membershipId}/${characterId}`, { data, timestamp });
 }
 
 function onSnapshot(db, psn) {
@@ -30,19 +30,21 @@ function onSnapshot(db, psn) {
       debug('polling error: %o', err);
     } else {
 
+      const timestamp = new Date().toISOString();
       const meta = {
         psn,
         membershipId: snapshot.membershipId,
         characterMetas: snapshot.characterMetas,
+        timestamp,
       };
 
       const pvpFactory = pushPvP(db, snapshot.membershipId);
       const statsFactory = pushStats(db, snapshot.membershipId);
       const itemsFactory = pushItems(db, snapshot.membershipId);
 
-      const pvp = snapshot.characterStats.map(cha => pvpFactory(cha.id, cha.pvp));
-      const stats = snapshot.characterStats.map(cha => statsFactory(cha.id, cha.stats));
-      const items = snapshot.characterStats.map(cha => itemsFactory(cha.id, cha.items));
+      const pvp = snapshot.characterStats.map(cha => pvpFactory(cha.id, cha.pvp, timestamp));
+      const stats = snapshot.characterStats.map(cha => statsFactory(cha.id, cha.stats, timestamp));
+      const items = snapshot.characterStats.map(cha => itemsFactory(cha.id, cha.items, timestamp));
       const arr = [ pvp, stats, items ];
 
       const requests = () => arr

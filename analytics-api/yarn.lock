@@ -308,7 +308,7 @@ depd@~1.1.0:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.0.tgz#e1bd82c6aab6ced965b97b88b17ed3e528ca18c3"
 
 "destiny-analytics-db@file:../analytics-db":
-  version "1.1.4"
+  version "1.2.4"
   dependencies:
     firebase "^3.5.0"
 
@@ -322,7 +322,7 @@ depd@~1.1.0:
     node-uuid "^1.4.7"
 
 "destiny-analytics-service@file:../analytics-service":
-  version "1.2.15"
+  version "1.2.16"
   dependencies:
     debug "^2.2.0"
     destiny-analytics-db "file:../analytics-db"
@@ -473,6 +473,16 @@ faye-websocket@0.9.3:
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.9.3.tgz#482a505b0df0ae626b969866d3bd740cdb962e83"
   dependencies:
     websocket-driver ">=0.5.1"
+
+"file:../analytics-poller":
+  name destiny-analytics-poller
+  version "1.0.7"
+  dependencies:
+    debug "^2.2.0"
+    level "^1.5.0"
+    node-cron "^1.1.2"
+    node-fetch "^1.6.3"
+    node-uuid "^1.4.7"
 
 finalhandler@0.5.0:
   version "0.5.0"
